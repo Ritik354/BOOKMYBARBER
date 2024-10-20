@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Book My Barber</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-box">
+            <h2>Payment Information</h2>
+            
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <p>Service: Haircut & Beard Trim</p>
+                <p>Date & Time: 22nd Oct 2024, 10:30 AM</p>
+                <p>Total Amount: ₹500</p>
+            </div>
+
+            <!-- Payment Form -->
+            <form action="/payment" method="POST">
+                <div class="input-field">
+                    <label for="name">Name on Card</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="input-field">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="input-row">
+                    <div class="input-field half">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                    </div>
+                    <div class="input-field half">
+                        <label for="cvv">CVV</label>
+                        <input type="password" id="cvv" name="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                
+                <div class="input-field">
+                    <label for="save-card">
+                        <input type="checkbox" id="save-card" name="save-card">
+                        Save card details for future use
+                    </label>
+                </div>
+                
+                <button type="submit" class="pay-btn">Pay ₹500</button>
+            </form>
+
+            <!-- Alternate Payment Options -->
+            <div class="alternate-payment">
+                <h4>Or Pay With</h4>
+                <div class="payment-methods">
+                    <button class="method-btn">PayPal</button>
+                    <button class="method-btn">Google Pay</button>
+                    <button class="method-btn">UPI</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
